@@ -1,0 +1,12 @@
+file_format: "1"
+id: greg
+name: greg
+type: shield
+url: https://github.com/tangyboi3/greg/
+requires: 
+  - pro_micro
+features:
+  - keys
+siblings:
+  - greg_left
+  - greg_right

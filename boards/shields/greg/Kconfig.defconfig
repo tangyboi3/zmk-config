@@ -1,0 +1,16 @@
+if SHIELD_GREG_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "greg"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_GREG_RIGHT || SHIELD_GREG_LEFT
+
+config ZMK_SPLIT
+    default y
+
+endif
