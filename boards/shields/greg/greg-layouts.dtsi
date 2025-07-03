@@ -1,8 +1,9 @@
+#include <physical_layouts.dtsi>
+
 / {
     physical_layout0: physical_layout0 {
         compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        kscan = <&kscan0>;
+        display-name = "greg";
         transform = <&default_transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry
@@ -47,5 +48,20 @@
             , <&key_physical_attrs 100 100  900  365       0     0     0>
             , <&key_physical_attrs 100 100  800  375       0     0     0>
             ;
+    };
+
+     position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        complete;
+
+        physical_layout0 {
+            physical-layout = <&physical_layout0>;
+            positions 
+            = <0  1  2  3  4  5  25 24 23 22 21 20>
+            , <6  7  8  9  10 11 31 30 29 28 27 26>
+               , <12 13 14 15 16 36 35 34 33 32>
+                    , <17 18 19 39 38 37>;
+        };
     };
 };
