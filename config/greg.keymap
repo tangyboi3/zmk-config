@@ -25,20 +25,20 @@
             display-name = "alphas";
 
             bindings = <
-                &kp ESC      &kp B        &kp F        &kp L        &kp K        &kp Q          &kp P        &kp G        &kp O        &kp U        &dc          &kp RET
-                &mo 5        &kp N        &kp S        &kp H        &kp T        &kp M          &kp Y        &kp C        &kp A        &kp E        &kp I        &none
-//              &mo 5        &mt LGUI N   &mt LALT S   &mt LCTRL H  &mt LSHFT T  &kp M          &kp Y        &mt RSHFT C  &mt RCTRL A  &mt RALT E   &mt RGUI I   &none
-                             &kp X        &kp V        &kp J        &kp D        &kp Z          &kp SQT      &kp W        &kp MINUS    &kp FSLH     &cs
-                                                       &sl 1        &kp R        &kp BSLH       &kp BSPC     &kp SPACE    &sl 2
+                &kp ESC    &kp B      &kp F      &kp L      &kp K      &kp Q        &kp P      &kp G      &kp O      &kp U      &dc        &kp RET
+                &mo 4      &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp E      &kp I      &tog 5
+                           &kp X      &kp V      &kp J      &kp D      &kp Z        &kp SQT    &kp W      &kp MINUS  &kp FSLH   &cs
+                                                 &sl 1      &kp R      &kp BSLH     &kp BSPC   &kp SPACE  &sl 2
             >;
         };
+
         one {
             display-name = "numbers";
 
             bindings = <
-                &none      &none      &none      &kp MINUS  &kp PLUS   &none        &none      &kp N7     &kp N8     &kp N9     &trans     &none
-                &none      &sk LGUI   &sk LALT   &sk LSHFT  &sk LCTRL  &kp EQUAL    &none      &kp N4     &kp N5     &kp N6     &kp N0     &none
-                           &none      &none      &kp FSLH   &kp STAR   &none        &none      &kp N1     &kp N2     &kp N3     &trans
+                &none      &none      &none      &kp STAR   &kp PLUS   &none        &none      &kp N7     &kp N8     &kp N9     &trans     &none
+                &none      &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL  &kp EQUAL    &none      &kp N4     &kp N5     &kp N6     &kp N0     &none
+                           &none      &none      &kp FSLH   &kp MINUS  &none        &none      &kp N1     &kp N2     &kp N3     &trans
                                                  &none      &none      &none        &trans     &trans     &mo 3
             >;
         };
@@ -48,7 +48,7 @@
 
             bindings = <
                 &none      &none      &none      &none      &none      &none        &none      &none      &none      &none      &none      &none
-                &none      &none      &kp LEFT   &kp UP     &kp RIGHT  &none        &none      &sk RCTRL  &sk RSHFT  &sk RALT   &sk RGUI   &none
+                &none      &none      &kp LEFT   &kp UP     &kp RIGHT  &none        &none      &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &none
                            &none      &none      &kp DOWN   &none      &none        &none      &none      &none      &none      &none
                                                  &mo 3      &none      &none        &none      &none      &none
             >;
@@ -59,31 +59,31 @@
 
             bindings = <
                 &none      &none      &none      &none      &none      &none        &none      &kp F7     &kp F8     &kp F9     &kp F12    &none
-                &none      &sk LGUI   &sk LALT   &sk LSHFT  &sk LCTRL  &none        &none      &kp F4     &kp F5     &kp F6     &kp F11    &none
+                &none      &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL  &none        &none      &kp F4     &kp F5     &kp F6     &kp F11    &none
                            &none      &none      &none      &none      &none        &none      &kp F1     &kp F2     &kp F3     &kp F10
                                                  &none      &none      &none        &none      &none      &none
             >;
         };
 
         four {
-            display-name = "symbols";
-
-            bindings = <
-                &none      &none      &none      &none      &none      &none        &none      &none      &none      &none      &none      &none
-                &none      &none      &none      &none      &none      &none        &none      &none      &none      &none      &none      &none
-                           &none      &none      &none      &none      &none        &none      &none      &none      &none      &none
-                                                 &none      &none      &none        &none      &none      &none
-            >;
-        };
-
-        five {
-            display-name = "bluetooth profiles";
+            display-name = "bluetooth";
 
             bindings = <
                 &none    &none    &none    &none    &none    &none          &none        &bt BT_SEL 6  &bt BT_SEL 7  &bt BT_SEL 8  &none    &none
                 &none    &none    &none    &none    &none    &bootloader    &bootloader  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &none    &none
                          &none    &none    &none    &none    &none          &none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none
                                            &none    &none    &none          &none        &bt BT_CLR    &none
+            >;
+        };
+
+        five {
+            display-name = "gaming";
+
+            bindings = <
+                &kp ESC    &kp T      &kp Q      &kp N1     &kp E      &kp R        &none      &none      &none      &none      &none      &none
+                &kp TAB    &kp LSHFT  &kp A      &kp W      &kp D      &kp F        &none      &none      &none      &none      &none      &trans
+                           &kp LCTRL  &kp X      &kp S      &kp C      &kp V        &none      &none      &none      &none      &none
+                                                 &kp LALT   &kp SPACE  &kp Z        &none      &none      &none
             >;
         };
     };
