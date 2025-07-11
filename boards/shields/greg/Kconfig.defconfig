@@ -1,4 +1,4 @@
-if SHIELD_GREG_RIGHT
+if SHIELD_GREG_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "greg"
