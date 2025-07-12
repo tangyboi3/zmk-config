@@ -10,6 +10,7 @@
             bindings = <&kp DOT>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         cs: comma_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -26,7 +27,7 @@
 
             bindings = <
                 &kp ESC    &kp B      &kp F      &kp L      &kp K      &kp Q        &kp P      &kp G      &kp O      &kp U      &dc        &kp RET
-                &mo 4      &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp E      &kp I      &tog 5
+                &kp TAB    &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp E      &kp I      &kp DEL
                            &kp X      &kp V      &kp J      &kp D      &kp Z        &kp SQT    &kp W      &kp MINUS  &kp FSLH   &cs
                                                  &sl 1      &kp R      &kp BSLH     &kp BSPC   &kp SPACE  &sl 2
             >;
@@ -39,7 +40,7 @@
                 &none      &none      &none      &kp STAR   &kp PLUS   &none        &none      &kp N7     &kp N8     &kp N9     &trans     &none
                 &none      &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL  &kp EQUAL    &none      &kp N4     &kp N5     &kp N6     &kp N0     &none
                            &none      &none      &kp FSLH   &kp MINUS  &none        &none      &kp N1     &kp N2     &kp N3     &trans
-                                                 &none      &none      &none        &trans     &trans     &mo 3
+                                                 &none      &none      &none        &trans     &trans     &sl 3
             >;
         };
 
@@ -50,7 +51,7 @@
                 &none      &none      &none      &none      &none      &none        &none      &none      &none      &none      &none      &none
                 &none      &none      &kp LEFT   &kp UP     &kp RIGHT  &none        &none      &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &none
                            &none      &none      &kp DOWN   &none      &none        &none      &none      &none      &none      &none
-                                                 &mo 3      &none      &none        &none      &none      &none
+                                                 &sl 3      &none      &none        &none      &none      &none
             >;
         };
 
@@ -80,9 +81,9 @@
             display-name = "gaming";
 
             bindings = <
-                &kp ESC    &kp T      &kp Q      &kp N1     &kp E      &kp R        &none      &none      &none      &none      &none      &none
-                &kp TAB    &kp LSHFT  &kp A      &kp W      &kp D      &kp F        &none      &none      &none      &none      &none      &trans
-                           &kp LCTRL  &kp X      &kp S      &kp C      &kp V        &none      &none      &none      &none      &none
+                &kp ESC    &kp T      &kp Q      &kp N1     &kp E      &kp R        &kp Y      &kp U      &kp I      &kp O      &kp P      &kp RET
+                &kp TAB    &kp LSHFT  &kp A      &kp W      &kp D      &kp F        &kp H      &kp J      &kp K      &kp L      &kp SEMI   &none
+                           &kp LCTRL  &kp X      &kp S      &kp C      &kp V        &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
                                                  &kp LALT   &kp SPACE  &kp Z        &none      &none      &none
             >;
         };
@@ -91,15 +92,29 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_caps_lock  {
+        combo_bt_layer  {
             timeout-ms = <50>;
+            key-positions = <34 35>;
+            bindings = <&mo 4>;
+            layers = <0>;
+        };
+
+        combo_gaming_layer  {
+            timeout-ms = <50>;
+            key-positions = <38 39>;
+            bindings = <&tog 5>;
+            layers = <0 5>;
+        };
+
+        combo_caps_lock  {
+            timeout-ms = <75>;
             key-positions = <15 20>;
             bindings = <&kp CAPS>;
             layers = <0>;
         };
 
         combo_caps_word  {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <16 19>;
             bindings = <&caps_word>;
             layers = <0>;
