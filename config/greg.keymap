@@ -4,6 +4,7 @@
 
 #define BOOT &bootloader
 #define BTSL &bt BT_SEL
+#define BTDS &bt BT_DISC
 #define BTCL &bt BT_CLR
 #define BTCA &bt BT_CLR_ALL
 
@@ -21,6 +22,13 @@
     };
 
     behaviors {
+        bd: bspc_del {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         dc: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -34,6 +42,13 @@
             bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        qe: qmark_excl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -43,10 +58,10 @@
             display-name = "alphas";
 
             bindings = <
-                &kp ESC    &kp B      &kp F      &kp L      &kp K      &qu          &kp P      &kp G      &kp O      &kp U      &dc        &kp RET
-                &kp TAB    &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp E      &kp I      &kp DEL
-                           &kp X      &kp V      &kp J      &kp D      &kp Z        &kp SQT    &kp W      &kp MINUS  &kp FSLH   &cs
-                                                 &sl 1      &kp R      &kp BSLH     &kp BSPC   &kp SPACE  &sl 2
+                &kp ESC    &kp B      &kp F      &kp L      &kp K      &kp Q        &kp P      &kp G      &kp O      &kp U      &dc        &none
+                &kp TAB    &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp E      &kp I      &none
+                           &kp X      &kp V      &kp J      &kp D      &kp Z        &kp SQT    &kp W      &kp MINUS  &qe        &cs
+                                                 &sl 1      &kp R      &kp BSLH     &kp FSLH   &kp SPACE  &sl 2
             >;
         };
 
@@ -55,8 +70,8 @@
 
             bindings = <
                 &none      &none      &none      &kp STAR   &kp PLUS   &none        &none      &kp N7     &kp N8     &kp N9     &trans     &trans
-                &none      &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL  &kp EQUAL    &none      &kp N4     &kp N5     &kp N6     &kp N0     &none
-                           &none      &none      &kp FSLH   &kp MINUS  &none        &none      &kp N1     &kp N2     &kp N3     &trans
+                &none      &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL  &kp EQUAL    &none      &kp N1     &kp N2     &kp N3     &kp N0     &none
+                           &none      &none      &kp FSLH   &kp MINUS  &none        &none      &kp N4     &kp N5     &kp N6     &trans
                                                  &none      &none      &none        &trans     &trans     &sl 3
             >;
         };
@@ -66,7 +81,7 @@
 
             bindings = <
                 &none      &none      &none      &none      &none      &none        &none      &none      &none      &none      &none      &none
-                &none      &none      &kp LEFT   &kp UP     &kp RIGHT  &none        &none      &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &none
+                &none      &none      &kp LEFT   &kp UP     &kp RIGHT  &none        &none      &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &tog 4
                            &none      &none      &kp DOWN   &none      &none        &none      &none      &none      &none      &none
                                                  &sl 3      &none      &none        &trans     &trans     &none
             >;
@@ -76,9 +91,9 @@
             display-name = "f-keys";
 
             bindings = <
-                &none      &none      &none      &none      &none      &none        &none      &kp F7     &kp F8     &kp F9     &kp F12    &none
+                &none      &none      BTSL 1     BTSL 2     BTSL 3     &none        &none      &kp F7     &kp F8     &kp F9     &kp F12    &none
                 &none      &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL  BOOT         BOOT       &kp F4     &kp F5     &kp F6     &kp F11    &none
-                           BTCL       BTSL 1     BTSL 2     BTSL 3     BTCA         &none      &kp F1     &kp F2     &kp F3     &kp F10
+                           BTCL       BTDS 1     BTDS 2     BTDS 3     BTCA         &none      &kp F1     &kp F2     &kp F3     &kp F10
                                                  &none      &none      &none        &none      &none      &none
             >;
         };
@@ -90,7 +105,7 @@
                 &kp ESC    &kp T      &kp Q      &kp X      &kp E      &kp R        &kp Y      &kp U      &kp I      &kp O      &kp P      &kp RET
                 &kp TAB    &kp LSHFT  &kp A      &kp W      &kp D      &kp F        &kp H      &kp J      &kp K      &kp L      &kp SEMI   &tog 4
                            &kp LCTRL  &kp Z      &kp S      &kp C      &kp V        &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
-                                                 &kp LALT   &kp SPACE  &kp B        &none      &none      &none
+                                                 &kp LALT   &kp SPACE  &kp B        &none      &kp BSPC  &none
             >;
         };
     };
@@ -98,11 +113,18 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_gaming_layer  {
+        combo_ret  {
             timeout-ms = <50>;
-            key-positions = <38 39>;
-            bindings = <&tog 4>;
-            layers = <0>;
+            key-positions = <15 16>;
+            bindings = <&kp RET>;
+            layers = <0 1>;
+        };
+
+        combo_bspc_del  {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&bd>;
+            layers = <0 1>;
         };
 
         combo_caps_lock  {
