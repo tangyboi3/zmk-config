@@ -3,6 +3,14 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    macros {
+        qu: qu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp Q &kp U>;
+        };
+    };
+
     behaviors {
         dc: dot_colon {
             compatible = "zmk,behavior-mod-morph";
@@ -26,7 +34,7 @@
             display-name = "alphas";
 
             bindings = <
-                &kp ESC    &kp B      &kp F      &kp L      &kp K      &kp Q        &kp P      &kp G      &kp O      &kp U      &dc        &kp RET
+                &kp ESC    &kp B      &kp F      &kp L      &kp K      &qu          &kp P      &kp G      &kp O      &kp U      &dc        &kp RET
                 &kp TAB    &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp E      &kp I      &kp DEL
                            &kp X      &kp V      &kp J      &kp D      &kp Z        &kp SQT    &kp W      &kp MINUS  &kp FSLH   &cs
                                                  &sl 1      &kp R      &kp BSLH     &kp BSPC   &kp SPACE  &sl 2
