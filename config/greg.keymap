@@ -149,28 +149,28 @@
 
         combo_lbkt  {
             timeout-ms = <50>;
-            key-positions = <2 14>;
+            key-positions = <15 26>;
             bindings = <&kp LBKT>;
             layers = <0 1>;
         };
 
         combo_rbkt {
             timeout-ms = <50>;
-            key-positions = <9 21>;
+            key-positions = <20 31>;
             bindings = <&kp RBKT>;
             layers = <0 1>;
         };
 
         combo_lt  {
             timeout-ms = <50>;
-            key-positions = <5 17>;
+            key-positions = <16 27>;
             bindings = <&kp LT>;
             layers = <0 1>;
         };
 
         combo_gt {
             timeout-ms = <50>;
-            key-positions = <6 18>;
+            key-positions = <19 30>;
             bindings = <&kp GT>;
             layers = <0 1>;
         };
