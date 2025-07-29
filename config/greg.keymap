@@ -8,7 +8,9 @@
 #define BTCL &bt BT_CLR
 #define BTCA &bt BT_CLR_ALL
 
-&sk { quick-release; };
+&sk {
+    quick-release;
+};
 
 / {
     macros {
@@ -66,7 +68,7 @@
                 &none      &kp B      &kp F      &kp L      &kp K      &kp Q        &kp P      &kp G      &kp O      &kp U      &dc        &none
                 &none      &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp E      &kp I      &none
                            &kp X      &kp V      &kp J      &kp D      &kp Z        &kp SQT    &kp W      &kp MINUS  &qe        &cs
-                                                 &sl 1      &kp R      &none        &none      &kp SPACE  &sl 2
+                                                 &sl 2      &kp SPACE  &none        &none      &kp R      &sl 1
             >;
         };
 
@@ -74,10 +76,10 @@
             display-name = "nums";
 
             bindings = <
-                &none      &none      &tg        &kp STAR   &kp PLUS   &none        &none      &kp N7     &kp N8     &kp N9     &trans     &none
-                &none      &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL  &kp EQUAL    &none      &kp N1     &kp N2     &kp N3     &kp N0     &none
-                           &none      &kp BSLH   &kp FSLH   &kp MINUS  &none        &none      &kp N4     &kp N5     &kp N6     &trans
-                                                 &none      &none      &none        &none      &trans     &sl 3
+                &none      &kp EQUAL  &kp N9     &kp N8     &kp N7     &none        &none      &kp STAR   &kp PLUS   &tg        &trans     &none
+                &none      &kp N0     &kp N3     &kp N2     &kp N1     &none        &none      &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &none
+                           &none      &kp N6     &kp N5     &kp N4     &none        &none      &kp FSLH   &trans     &kp BSLH   &trans
+                                                 &sl 3      &trans     &none        &none      &none      &none
             >;
         };
 
@@ -86,9 +88,9 @@
 
             bindings = <
                 &none      &none      &none      &none      &none      &none        &none      &none      &none      &none      &none      &none
-                &none      &none      &kp LEFT   &kp UP     &kp RIGHT  &none        &none      &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &tog 4
-                           &none      &none      &kp DOWN   &none      &none        &none      &none      &none      &none      &none
-                                                 &sl 3      &none      &none        &none      &trans     &none
+                &none      &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL  &none        &none      &kp LEFT   &kp UP     &kp RIGHT  &none      &tog 4
+                           &none      &none      &none      &none      &none        &none      &kp HOME   &kp DOWN   &kp END    &none
+                                                 &none      &none      &none        &none      &none     &sl 3
             >;
         };
 
@@ -122,28 +124,28 @@
             timeout-ms = <50>;
             key-positions = <26 27>;
             bindings = <&kp RET>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         combo_bspc_del  {
             timeout-ms = <50>;
             key-positions = <30 31>;
             bindings = <&bd>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         combo_esc  {
             timeout-ms = <50>;
             key-positions = <25 26>;
             bindings = <&kp ESC>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         combo_tab  {
             timeout-ms = <50>;
             key-positions = <31 32>;
             bindings = <&kp TAB>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         combo_caps_lock  {
@@ -164,56 +166,56 @@
             timeout-ms = <50>;
             key-positions = <4 16>;
             bindings = <&kp LPAR>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         combo_rpar  {
             timeout-ms = <50>;
             key-positions = <7 19>;
             bindings = <&kp RPAR>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         combo_lbrc  {
             timeout-ms = <50>;
             key-positions = <3 15>;
             bindings = <&kp LBRC>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         combo_rbrc  {
             timeout-ms = <50>;
             key-positions = <8 20>;
             bindings = <&kp RBRC>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         combo_lbkt  {
             timeout-ms = <50>;
             key-positions = <15 26>;
             bindings = <&kp LBKT>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         combo_rbkt {
             timeout-ms = <50>;
             key-positions = <20 31>;
             bindings = <&kp RBKT>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         combo_lt  {
             timeout-ms = <50>;
             key-positions = <16 27>;
             bindings = <&kp LT>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         combo_gt {
             timeout-ms = <50>;
             key-positions = <19 30>;
             bindings = <&kp GT>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
     };
 };
