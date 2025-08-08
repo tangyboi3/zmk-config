@@ -91,8 +91,8 @@
             display-name = "navi";
 
             bindings = <
-                &none      &none      &none      &none      &none      &none        &none      &none      &none      &none      &none      &none
-                &none      &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL  &none        &none      &kp LEFT   &kp UP     &kp RIGHT  &none      &tog 4
+                &none      &none      &none      &none      &none      &none        &kp PG_UP  &none      &none      &none      &none      &none
+                &none      &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL  &none        &kp PG_DN  &kp LEFT   &kp UP     &kp RIGHT  &none      &tog 4
                            &none      &kp K_CUT  &kp K_COPY &kp K_PASTE &none       &none      &kp HOME   &kp DOWN   &kp END    &none
                                                  &none      &trans     &none        &none      &trans     &sl 3
             >;
