@@ -33,17 +33,17 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        dc: dot_colon {
+        de: dot_excl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
+            bindings = <&kp DOT>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        cs: comma_semi {
+        cq: comma_qmark {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&kp COMMA>, <&kp QMARK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -69,9 +69,9 @@
             display-name = "night";
 
             bindings = <
-                &none      &kp B      &kp F      &kp L      &kp K      &kp Q        &kp P      &kp G      &kp O      &kp U      &dc        &none
+                &none      &kp B      &kp F      &kp L      &kp K      &kp Q        &kp P      &kp G      &kp O      &kp U      &kp SQT    &none
                 &none      &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp E      &kp I      &none
-                           &kp X      &kp V      &kp J      &kp D      &kp Z        &none      &kp W      &kp SQT    &qe        &cs
+                           &kp X      &kp V      &kp J      &kp D      &kp Z        &none      &kp W      &cq        &de        &kp SQT
                                                  &sl 2      &kp SPACE  &none        &none      &kp R      &sl 1
             >;
         };
@@ -82,7 +82,7 @@
             bindings = <
                 &none      &tg        &kp N9     &kp N8     &kp N7     &none        &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp CARET  &none
                 &none      &kp N0     &kp N3     &kp N2     &kp N1     &none        &kp PIPE   &sk RCTRL  &sk RSHFT  &sk RGUI   &sk RALT   &none
-                           &none      &kp N6     &kp N5     &kp N4     &none        &none      &kp AMPS   &none      &none      &none
+                           &none      &kp N6     &kp N5     &kp N4     &none        &none      &kp AMPS   &trans     &trans     &none
                                                  &sl 3      &trans     &none        &none      &trans     &none
             >;
         };
