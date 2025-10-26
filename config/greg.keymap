@@ -51,7 +51,7 @@
                 &none      &none      &kp F      &kp L      &kp K      &kp J        &kp P      &kp G      &kp O      &kp U      &none      &none
                 &none      &kp N      &kp S      &kp H      &kp T      &kp M        &kp Y      &kp C      &kp A      &kp I      &kp E      &none
                            &kp B      &kp X      &kp SQT    &kp D      &none        &none      &kp W      &de        &cq        &kp Z
-                                                 &none      &sl 2      &kp SPACE    &kp R      &sl 1      &none
+                                                 &none      &mo 2      &kp SPACE    &kp R      &mo 1      &none
             >;
         };
 
@@ -62,7 +62,7 @@
                 &none      &none      &kp N9     &kp N8     &kp N7     &kp AMPS     &kp EXCL   &kp LT     &kp EQUAL  &kp GT     &none      &none
                 &none      &kp N3     &kp N2     &kp N1     &kp N0     &kp PIPE     &kp PRCNT  &sk RCTRL  &sk RSHFT  &sk RALT   &kp DLLR   &none
                            &none      &kp N6     &kp N5     &kp N4     &none        &none      &sk RGUI   &kp UNDER  &kp CARET  &kp HASH
-                                                 &none      &sl 3      &trans       &trans     &none      &none
+                                                 &none      &mo 3      &trans       &trans     &none      &none
             >;
         };
 
@@ -73,7 +73,7 @@
                 &none      &none      &kp K_CUT  &kp K_COPY &kp K_PASTE &none       &kp PG_UP  &none      &none      &none      &none      &none
                 &none      &none      &sk LALT   &sk LSHFT  &sk LCTRL  &none        &kp PG_DN  &kp LEFT   &kp UP     &kp RIGHT  &none      &tog 4
                            &none      &none      &none      &sk LGUI   &none        &none      &kp HOME   &kp DOWN   &kp END    &none
-                                                 &none      &none      &trans       &trans     &sl 3      &none
+                                                 &none      &none      &trans       &trans     &mo 3      &none
             >;
         };
 
