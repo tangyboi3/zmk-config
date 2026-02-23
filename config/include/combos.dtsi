@@ -32,13 +32,6 @@
             bindings = <&kp BSPC>, <&kp DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
-        tg: tilde_grave {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp TILDE>, <&kp GRAVE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     combos {
@@ -62,7 +55,7 @@
         COMBO(lbkt,     &kp LBKT,    LM3 LB3,     BASE NUMS NAVI, 30, 0)
         COMBO(lbrc,     &kp LBRC,    LM2 LB2,     BASE NUMS NAVI, 30, 0)
         COMBO(lpar,     &kp LPAR,    LM1 LB1,     BASE NUMS NAVI, 30, 0)
-        COMBO(tg,       &tg,         LT3 LM3,     BASE NUMS NAVI, 30, 0)
+        COMBO(grave,    &GRAVE,      LT3 LM3,     BASE NUMS NAVI, 30, 0)
         COMBO(plus,     &kp PLUS,    LT2 LM2,     BASE NUMS NAVI, 30, 0)
         COMBO(star,     &kp STAR,    LT1 LM1,     BASE NUMS NAVI, 30, 0)
         // right hand vertical
