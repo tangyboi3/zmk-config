@@ -17,6 +17,7 @@
 #include "include/combos.dtsi"
 
 &sk {
+    release-after-ms = <500>;
     quick-release;
 };
 
