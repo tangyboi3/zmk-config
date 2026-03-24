@@ -26,12 +26,6 @@
     };
 
     behaviors {
-        bd: bspc_del {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BSPC>, <&kp DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     combos {
@@ -43,7 +37,7 @@
         // right hand homerow
         COMBO(ret,      &kp RET,     RM1 RM2 RM3, BASE NUMS NAVI, 30, 0)
         COMBO(rshft,    &sk RSHFT,   RM2 RM3,     BASE NUMS NAVI, 30, 0)
-        COMBO(bd,       &bd,         RM1 RM2,     BASE NUMS NAVI, 30, 0)
+        COMBO(bspc,     &kp BSPC,         RM1 RM2,     BASE NUMS NAVI, 30, 0)
         // left hand horizontal
         COMBO(v,        &kp V,       LT3 LT2,     BASE NUMS NAVI, 30, 0)
         COMBO(qu,       &qu,         LT2 LT1,     BASE NUMS NAVI, 30, 0)
