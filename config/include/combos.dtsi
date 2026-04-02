@@ -60,7 +60,7 @@
         COMBO(minus,    &kp MINUS,   RT2 RM2,     BASE NUMS NAVI, 30, 0)
         COMBO(fslh,     &kp FSLH,    RT1 RM1,     BASE NUMS NAVI, 30, 0)
         // cross hand
-        COMBO(boot,     &bootloader, LT2 RT2,     BASE NUMS NAVI, 30, 0)
+        COMBO(boot,     &bootloader, LB2 RB2,     BASE NUMS NAVI, 30, 0)
         COMBO(cl,       &kp CAPS,    LM2 RM2,     BASE NUMS NAVI, 30, 0)
         COMBO(cw,       &caps_word,  LM1 RM1,     BASE NUMS NAVI, 30, 0)
     };
