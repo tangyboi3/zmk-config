@@ -21,9 +21,11 @@
 include:
   - board: nice_nano
     shield: greg_left
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-    snippet: studio-rpc-usb-uart
   - board: nice_nano
     shield: greg_right
+  - board: nice_nano
+    shield: fih_left
+  - board: nice_nano
+    shield: fih_right
 # - board: nice_nano
 #   shield: settings_reset
