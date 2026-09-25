@@ -44,12 +44,12 @@
         compatible = "zmk,keymap";
 
         zero {
-            display-name = "nightey";
+            display-name = "birdie";
 
             bindings = <LAYER( \
-                &none,      &kp F,      &kp L,      &kp K,      &kp J,        &kp P,      &kp G,      &kp O,      &kp U,      &none, \
-                &kp N,      &kp S,      &kp H,      &kp T,      &kp M,        &kp Y,      &kp C,      &kp A,      &kp I,      &kp E, \
-                &kp B,      &kp X,      &kp SQT,    &kp D,      &none,        &none,      &kp W,      &de,        &cq,        &kp Z, \
+                &none,      &kp L,      &kp P,      &kp K,      &kp F,        &kp SQT,    &kp Y,      &kp O,      &kp U,      &none, \
+                &kp T,      &kp S,      &kp N,      &kp H,      &kp M,        &kp G,      &kp C,      &kp A,      &kp I,      &kp E, \
+                &kp V,      &kp Z,      &kp B,      &kp D,      &none,        &none,      &kp W,      &de,        &cq,        &kp J, \
                                         &none,      &mo 2,      &kp SPACE,    &kp R,      &mo 1,      &none
             )>;
         };

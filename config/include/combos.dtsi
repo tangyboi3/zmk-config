@@ -39,7 +39,7 @@
         COMBO(rshft,    &sk RSHFT,   RM2 RM3,     BASE NUMS NAVI, 30, 0)
         COMBO(bspc,     &kp BSPC,    RM1 RM2,     BASE NUMS NAVI, 30, 0)
         // left hand horizontal
-        COMBO(v,        &kp V,       LT3 LT2,     BASE NUMS NAVI, 30, 0)
+        COMBO(x,        &kp X,       LT3 LT2,     BASE NUMS NAVI, 30, 0)
         COMBO(qu,       &qu,         LT2 LT1,     BASE NUMS NAVI, 30, 0)
         COMBO(q,        &kp Q,       LB2 LB1,     BASE NUMS NAVI, 30, 0)
         // right hand horizontal
