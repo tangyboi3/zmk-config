@@ -67,8 +67,8 @@
 
             bindings = <LAYER( \
                 &none,      &kp L,      &kp P,      &kp K,      &kp F,        &kp SQT,    &kp Y,      &kp O,      &kp U,      &none, \
-                &kp T,      &kp S,      &kp N,      &kp H,      &kp M,        &kp G,      &kp C,      &kp A,      &kp I,      &kp E, \
-                &kp V,      &kp Z,      &kp B,      &kp D,      &none,        &none,      &kp W,      &de,        &cq,        &kp J, \
+                &kp T,      &kp S,      &kp N,      &kp H,      &kp M,        &kp W,      &kp C,      &kp A,      &kp I,      &kp E, \
+                &kp V,      &kp Z,      &kp B,      &kp D,      &none,        &none,      &kp G,      &de,        &cq,        &kp J, \
                                         &none,      &mo 2,      &kp SPACE,    &kp R,      &mo 1,      &none
             )>;
         };
