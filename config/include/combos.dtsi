@@ -54,11 +54,11 @@
         COMBO(lpar,     &kp LPAR,    LT1 LM1,     BASE NUMS     , 30, 0)
         // right hand vertical
         COMBO(bslh,     &kp BSLH,    RM3 RB3,     BASE NUMS     , 30, 0)
-        COMBO(fslh,     &kp FSLH,    RM2 RB2,     BASE NUMS     , 30, 0)
-        COMBO(minus,    &kp MINUS,   RM1 RB1,     BASE NUMS     , 30, 0)
+        COMBO(minus,    &kp MINUS,   RM2 RB2,     BASE NUMS     , 30, 0)
+        COMBO(fslh,     &kp FSLH,    RM1 RB1,     BASE NUMS     , 30, 0)
         COMBO(grave,    &kp GRAVE,   RT3 RM3,     BASE NUMS     , 30, 0)
-        COMBO(star,     &kp STAR,    RT2 RM2,     BASE NUMS     , 30, 0)
-        COMBO(plus,     &kp PLUS,    RT1 RM1,     BASE NUMS     , 30, 0)
+        COMBO(plus,     &kp PLUS,    RT2 RM2,     BASE NUMS     , 30, 0)
+        COMBO(star,     &kp STAR,    RT1 RM1,     BASE NUMS     , 30, 0)
         // cross hand
         COMBO(boot,     &bootloader, LB2 RB2,     BASE NUMS NAVI, 30, 0)
         COMBO(cl,       &kp CAPS,    LM2 RM2,     BASE NUMS NAVI, 30, 0)
