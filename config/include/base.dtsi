@@ -12,6 +12,30 @@
 #define NAVI 2
 #define FUNC 3
 
+#ifdef LAYER_BASE
+#define LAYER_SEL_BASE LAYER_BASE
+#else
+#define LAYER_SEL_BASE LAYER
+#endif
+
+#ifdef LAYER_NUMS
+#define LAYER_SEL_NUMS LAYER_NUMS
+#else
+#define LAYER_SEL_NUMS LAYER
+#endif
+
+#ifdef LAYER_NAVI
+#define LAYER_SEL_NAVI LAYER_NAVI
+#else
+#define LAYER_SEL_NAVI LAYER
+#endif
+
+#ifdef LAYER_FUNC
+#define LAYER_SEL_FUNC LAYER_FUNC
+#else
+#define LAYER_SEL_FUNC LAYER
+#endif
+
 #include "combos.dtsi"
 
 &sk {
@@ -65,7 +89,7 @@
         zero {
             display-name = "birdie";
 
-            bindings = <LAYER( \
+            bindings = <LAYER_SEL_BASE( \
                 &none,      &kp L,      &kp P,      &kp K,      &kp F,        &kp SQT,    &kp Y,      &kp O,      &kp U,      &none, \
                 &kp T,      &kp S,      &kp N,      &kp H,      &kp M,        &kp W,      &kp C,      &kp A,      &kp I,      &kp E, \
                 &kp V,      &kp Z,      &kp B,      &kp D,      &none,        &none,      &kp G,      &de,        &cq,        &kp J, \
@@ -74,9 +98,9 @@
         };
 
         one {
-            display-name = "num";
+            display-name = "nums";
 
-            bindings = <LAYER( \
+            bindings = <LAYER_SEL_NUMS( \
                 &none,      &kp N9,     &kp N8,     &kp N7,     &kp AMPS,     &kp EXCL,   &kp LT,     &kp EQUAL,  &kp GT,     &none, \
                 &kp N3,     &kp N2,     &kp N1,     &kp N0,     &kp PIPE,     &kp PRCNT,  &sk RCTRL,  &sk RSHFT,  &sk RALT,   &kp DLLR, \
                 &none,      &kp N6,     &kp N5,     &kp N4,     &none,        &none,      &sk RGUI,   &kp UNDER,  &kp CARET,  &kp HASH, \
@@ -85,9 +109,9 @@
         };
 
         two {
-            display-name = "nav";
+            display-name = "navi";
 
-            bindings = <LAYER( \
+            bindings = <LAYER_SEL_NAVI( \
                 &none,      &cut,       &copy,      &paste,     &none,       &kp PG_UP,  &none,      &none,      &none,      &none, \
                 &none,      &sk LALT,   &sk LSHFT,  &sk LCTRL,  &none,        &kp PG_DN,  &kp LEFT,   &kp UP,     &kp RIGHT,  &none, \
                 &none,      &none,      &kp DEL,    &sk LGUI,   &none,        &none,      &kp HOME,   &kp DOWN,   &kp END,    &none, \
@@ -96,9 +120,9 @@
         };
 
         three {
-            display-name = "fun";
+            display-name = "func";
 
-            bindings = <LAYER( \
+            bindings = <LAYER_SEL_FUNC( \
                 &none,      BTSL 3,     BTSL 2,     BTSL 1,     BTCA,         &none,      &kp F7,     &kp F8,     &kp F9,     &none, \
                 &sk LGUI,   &sk LALT,   &sk LSHFT,  &sk LCTRL,  BTCL,         &none,      &kp F1,     &kp F2,     &kp F3,     &kp F11, \
                 &none,      BTDS 3,     BTDS 2,     BTDS 1,     &none,        &none,      &kp F4,     &kp F5,     &kp F6,     &kp F10, \
