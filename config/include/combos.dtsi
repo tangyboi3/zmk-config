@@ -26,6 +26,12 @@
     };
 
     behaviors {
+        g13: gaming_1_3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp N3>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     combos {
@@ -63,5 +69,9 @@
         COMBO(boot,     &bootloader, LB2 RB2,     BASE NUMS NAVI, 30, 0)
         COMBO(cl,       &kp CAPS,    LM2 RM2,     BASE NUMS NAVI, 30, 0)
         COMBO(cw,       &caps_word,  LM1 RM1,     BASE NUMS NAVI, 30, 0)
+        // gaming layer
+        COMBO(game,     &tog GAME,   LB1 RB1,     BASE      GAME, 30, 500)
+        COMBO(one,      &g13,        LM1 LB1,               GAME, 30, 0)
+        COMBO(two,      &kp N2,      LM3 LB3,               GAME, 30, 0)
     };
 };
