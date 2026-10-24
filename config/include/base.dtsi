@@ -64,6 +64,7 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp X>, <&macro_release &kp LCTRL>;
         };
+
         copy: control_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -91,6 +92,47 @@
             bindings = <&kp COMMA>, <&kp QMARK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        ak_l: ak_l {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp L>; // default
+
+            akt_bl { trigger-keys = <B>; bindings = <&kp Z>; }; // if last key was B, ak_l sends Z
+            akt_ll { trigger-keys = <L>; bindings = <&kp H>; };
+        };
+
+        ak_h: ak_h {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp H>;
+
+            akt_lh { trigger-keys = <L>; bindings = <&kp L>; };
+        };
+
+        ak_z: ak_z {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp Z>;
+
+            akt_bz { trigger-keys = <B>; bindings = <&kp L>; };
+        };
+
+        ak_k: ak_k {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp K>;
+
+            akt_xk { trigger-keys = <X>; bindings = <&kp P>; };
+        };
+
+        ak_p: ak_p {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp P>;
+
+            akt_xp { trigger-keys = <X>; bindings = <&kp K>; };
+        };
     };
 
     keymap {
@@ -100,9 +142,9 @@
             display-name = "birdie";
 
             bindings = <LAYER_SEL_BASE( \
-                &none,      &kp L,      &kp P,      &kp K,      &kp F,        &kp SQT,    &kp Y,      &kp O,      &kp U,      &none, \
-                &kp T,      &kp S,      &kp N,      &kp H,      &kp M,        &kp W,      &kp C,      &kp A,      &kp I,      &kp E, \
-                &kp V,      &kp Z,      &kp B,      &kp D,      &none,        &none,      &kp G,      &de,        &cq,        &kp J, \
+                &none,      &ak_l,      &ak_p,      &ak_k,      &kp F,        &kp SQT,    &kp Y,      &kp O,      &kp U,      &none, \
+                &kp T,      &kp S,      &kp N,      &ak_h,      &kp M,        &kp W,      &kp C,      &kp A,      &kp I,      &kp E, \
+                &kp V,      &ak_z,      &kp B,      &kp D,      &none,        &none,      &kp G,      &de,        &cq,        &kp J, \
                                         &none,      &mo 2,      &kp SPACE,    &kp R,      &mo 1,      &none
             )>;
         };
