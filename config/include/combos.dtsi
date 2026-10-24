@@ -38,18 +38,18 @@
         compatible = "zmk,combos";
         // left hand homerow
         COMBO(esc,      &kp ESC,     LM3 LM2 LM1, BASE NUMS NAVI, 30, 0)
-        COMBO(lshft,    &sk LSHFT,   LM3 LM2,     BASE NUMS NAVI, 30, 0)
+        COMBO(lshft,    &sk LSHFT,   LM3 LM2,     BASE NUMS     , 30, 0)
         COMBO(tab,      &kp TAB,     LM2 LM1,     BASE NUMS NAVI, 30, 0)
         // right hand homerow
         COMBO(ret,      &kp RET,     RM1 RM2 RM3, BASE NUMS NAVI, 30, 0)
-        COMBO(rshft,    &sk RSHFT,   RM2 RM3,     BASE NUMS NAVI, 30, 0)
+        COMBO(rshft,    &sk RSHFT,   RM2 RM3,     BASE NUMS     , 30, 0)
         COMBO(bspc,     &kp BSPC,    RM1 RM2,     BASE NUMS NAVI, 30, 0)
         // left hand horizontal
         COMBO(x,        &kp X,       LT3 LT2,     BASE,           30, 0)
         COMBO(qu,       &qu,         LT2 LT1,     BASE,           30, 0)
         COMBO(q,        &kp Q,       LB2 LB1,     BASE,           30, 0)
         // right hand horizontal
-        COMBO(semi,     &kp SEMI,    RT2 RT3,     BASE NUMS     , 30, 0)
+        COMBO(semi,     &kp SEMI,    RT2 RT3,     BASE NUMS     , 30, 100)
         COMBO(at,       &kp AT,      RB1 RB2,     BASE NUMS     , 30, 0)
         // left hand vertical
         COMBO(rbkt,     &kp RBKT,    LM3 LB3,     BASE NUMS     , 30, 0)
@@ -66,9 +66,9 @@
         COMBO(plus,     &kp PLUS,    RT2 RM2,     BASE NUMS     , 30, 0)
         COMBO(star,     &kp STAR,    RT1 RM1,     BASE NUMS     , 30, 0)
         // cross hand
-        COMBO(boot,     &bootloader, LB2 RB2,     BASE NUMS NAVI, 30, 0)
-        COMBO(cl,       &kp CAPS,    LM2 RM2,     BASE NUMS NAVI, 30, 0)
-        COMBO(cw,       &caps_word,  LM1 RM1,     BASE NUMS NAVI, 30, 0)
+        COMBO(boot,     &bootloader, LB2 RB2,     BASE NUMS NAVI, 50, 200)
+        COMBO(cl,       &kp CAPS,    LM2 RM2,     BASE NUMS NAVI, 50, 200)
+        COMBO(cw,       &caps_word,  LM1 RM1,     BASE NUMS NAVI, 50, 200)
         // gaming layer
         COMBO(game,     &tog GAME,   LB1 RB1,     BASE      GAME, 30, 500)
         COMBO(one,      &g13,        LM1 LB1,               GAME, 30, 0)
