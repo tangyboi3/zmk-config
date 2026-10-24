@@ -27,10 +27,17 @@
 
     behaviors {
         g13: gaming_1_3 {
-            compatible = "zmk,behavior-mod-morph";
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp N1>, <&kp N3>;
-            mods = <(MOD_LALT)>;
+        };
+      
+        g24: gaming_2_4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N2>, <&kp N4>;
         };
     };
 
@@ -72,7 +79,7 @@
         // gaming layer
         COMBO(game,     &tog GAME,   LB1 RB1,     BASE      GAME, 30, 500)
         COMBO(game_one, &g13,        LM1 LB1,               GAME, 30, 0)
-        COMBO(game_two, &kp N2,      LM3 LB3,               GAME, 30, 0)
+        COMBO(game_two, &g24,        LM3 LB3,               GAME, 30, 0)
         COMBO(game_tab, &kp TAB,     LM3 LM1,               GAME, 30, 0)
         COMBO(game_esc, &kp ESC,     LM3 LM2 LM1,           GAME, 30, 0)
     };
