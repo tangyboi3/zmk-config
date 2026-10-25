@@ -27,17 +27,19 @@
 
     behaviors {
         g13: gaming_1_3 {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp N3>;
+            bindings = <&kp N1>;
+
+            akt_11 { trigger-keys = <N1>; bindings = <&kp N3>; };
         };
       
         g24: gaming_2_4 {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N2>, <&kp N4>;
+            bindings = <&kp N2>;
+
+            akt_22 { trigger-keys = <N2>; bindings = <&kp N4>; };
         };
     };
 
