@@ -26,21 +26,7 @@
     };
 
     behaviors {
-        g13: gaming_1_3 {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&kp N1>;
 
-            akt_11 { trigger-keys = <N1>; bindings = <&kp N3>; };
-        };
-      
-        g24: gaming_2_4 {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&kp N2>;
-
-            akt_22 { trigger-keys = <N2>; bindings = <&kp N4>; };
-        };
     };
 
     combos {
@@ -81,8 +67,10 @@
         // gaming layer
         COMBO(game,     &to GAME,    LB1 RB1,     BASE      GAME, 100, 500)
         COMBO(base,     &to BASE,    LB1 RB1,               GAME, 100, 500)
-        COMBO(game_one, &g13,        LM1 LB1,               GAME,  50, 0)
-        COMBO(game_two, &g24,        LM3 LB3,               GAME,  50, 0)
+        COMBO(game_one, &kp N1,      LT1 LM1,               GAME,  50, 0)
+        COMBO(game_two, &kp N2,      LT3 LM3,               GAME,  50, 0)
+        COMBO(game_three, &kp N3,    LM1 LB1,               GAME,  50, 0)
+        COMBO(game_four, &kp N3,     LM3 LB3,               GAME,  50, 0)
         COMBO(game_tab, &kp TAB,     LM3 LM1,               GAME,  50, 0)
         COMBO(game_esc, &kp ESC,     LM3 LM2 LM1,           GAME, 100, 100)
     };
