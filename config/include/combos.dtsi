@@ -79,7 +79,8 @@
         COMBO(cl,       &kp CAPS,    LM2 RM2,     BASE NUMS NAVI, 50, 200)
         COMBO(cw,       &caps_word,  LM1 RM1,     BASE NUMS NAVI, 50, 200)
         // gaming layer
-        COMBO(game,     &tog GAME,   LB1 RB1,     BASE      GAME, 100, 500)
+        COMBO(game,     &to GAME,    LB1 RB1,     BASE      GAME, 100, 500)
+        COMBO(base,     &to BASE,    LB1 RB1,               GAME, 100, 500)
         COMBO(game_one, &g13,        LM1 LB1,               GAME,  50, 0)
         COMBO(game_two, &g24,        LM3 LB3,               GAME,  50, 0)
         COMBO(game_tab, &kp TAB,     LM3 LM1,               GAME,  50, 0)
