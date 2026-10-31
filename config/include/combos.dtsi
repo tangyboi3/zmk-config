@@ -64,9 +64,9 @@
         COMBO(boot,     &bootloader, LB2 RB2,     BASE NUMS NAVI, 50, 200)
         COMBO(cl,       &kp CAPS,    LM2 RM2,     BASE NUMS NAVI, 50, 200)
         COMBO(cw,       &caps_word,  LM1 RM1,     BASE NUMS NAVI, 50, 200)
-        // gaming layer
         COMBO(game,     &to GAME,    LB1 RB1,     BASE      GAME, 100, 500)
-        COMBO(base,     &to BASE,    LB1 RB1,               GAME, 100, 500)
+        COMBO(base,     &to BASE,    LT1 RT1,               GAME, 100, 500)
+        // gaming layer
         COMBO(game_one, &kp N1,      LT1 LM1,               GAME,  50, 0)
         COMBO(game_two, &kp N2,      LT3 LM3,               GAME,  50, 0)
         COMBO(game_three, &kp N3,    LM1 LB1,               GAME,  50, 0)
