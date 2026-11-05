@@ -100,6 +100,7 @@
 
             akt_bl { trigger-keys = <B>; bindings = <&kp Z>; }; // if last key was B, ak_l sends Z
             akt_ll { trigger-keys = <L>; bindings = <&kp H>; };
+            akt_sl { trigger-keys = <S>; bindings = <&kp V>; };
         };
 
         ak_h: ak_h {
@@ -133,6 +134,14 @@
 
             akt_xp { trigger-keys = <X>; bindings = <&kp K>; };
         };
+
+        ak_v: ak_v {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp V>;
+
+            akt_sv { trigger-keys = <S>; bindings = <&kp L>; };
+        };
     };
 
     keymap {
@@ -144,7 +153,7 @@
             bindings = <LAYER_SEL_BASE( \
                 &none,      &ak_l,      &ak_p,      &ak_k,      &kp F,        &kp SQT,    &kp Y,      &kp O,      &kp U,      &none, \
                 &kp T,      &kp S,      &kp N,      &ak_h,      &kp M,        &kp W,      &kp C,      &kp A,      &kp I,      &kp E, \
-                &kp V,      &ak_z,      &kp B,      &kp D,      &none,        &none,      &kp G,      &de,        &cq,        &kp J, \
+                &ak_v,      &ak_z,      &kp B,      &kp D,      &none,        &none,      &kp G,      &de,        &cq,        &kp J, \
                                         &none,      &mo 2,      &kp SPACE,    &kp R,      &mo 1,      &none
             )>;
         };
