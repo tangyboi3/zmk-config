@@ -68,8 +68,8 @@
         COMBO(base,     &to BASE,    LT1 RT1,               GAME, 100, 500)
         // gaming layer
         COMBO(game_one, &kp N1,      LT1 LM1,               GAME,  50, 0)
-        COMBO(game_two, &kp N2,      LT3 LM3,               GAME,  50, 0)
-        COMBO(game_three, &kp N3,    LM1 LB1,               GAME,  50, 0)
+        COMBO(game_two, &kp N2,      LM1 LB1,               GAME,  50, 0)
+        COMBO(game_three, &kp N3,    LT3 LM3,               GAME,  50, 0)
         COMBO(game_four, &kp N4,     LM3 LB3,               GAME,  50, 0)
         COMBO(game_tab, &kp TAB,     LM3 LM1,               GAME,  50, 0)
         COMBO(game_esc, &kp ESC,     LM3 LM2 LM1,           GAME, 100, 100)
